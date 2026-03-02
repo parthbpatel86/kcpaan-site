@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KC Paan & Icecream with Arya Ayurveda | Artesia, CA</title>
+  <meta name="description" content="KC Paan & Icecream with Arya Ayurveda - Authentic Paan, Kulfi, Icecream, Fresh Sugarcane Juice & Ayurvedic products in Artesia, CA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f0f7f2;
+      color: #2d3436;
+      min-height: 100vh;
+    }
+
+    /* Decorative mandala-inspired top border */
+    body::before {
+      content: '';
+      display: block;
+      height: 6px;
+      background: linear-gradient(90deg, #c1272d, #f5d36e, #2d8a4e, #f5d36e, #c1272d);
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 220px;
+      height: auto;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #c1272d;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: #2d8a4e;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-item.featured {
+      grid-column: 1 / -1;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .info-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #c1272d;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f5d36e;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .info-row:last-child { margin-bottom: 0; }
+
+    .info-icon {
+      flex-shrink: 0;
+      width: 20px;
+      text-align: center;
+      font-size: 1rem;
+      padding-top: 2px;
+    }
+
+    .info-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .info-text a {
+      color: #2d8a4e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .info-text a:hover { text-decoration: underline; }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 4px 12px;
+      font-size: 0.9rem;
+    }
+    .hours-grid .day { font-weight: 600; }
+    .hours-grid .closed { color: #c1272d; }
+
+    .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .highlight-tag {
+      background: white;
+      border: 2px solid #2d8a4e;
+      color: #2d8a4e;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .cta-primary {
+      background: #c1272d;
+      color: white;
+    }
+
+    .cta-secondary {
+      background: #2d8a4e;
+      color: white;
+    }
+
+    .cta-outline {
+      background: white;
+      color: #c1272d;
+      border: 2px solid #c1272d;
+    }
+
+    .coming-soon {
+      background: linear-gradient(135deg, #2d8a4e, #1a6b38);
+      color: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .coming-soon h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .coming-soon p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 24px 16px; }
+      h1 { font-size: 1.6rem; }
+      .logo { width: 160px; }
+      .gallery { grid-template-columns: 1fr; }
+      .cta { padding: 12px 22px; font-size: 0.9rem; }
+      .hours-grid { grid-template-columns: 90px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <img src="images/logo-500.png" alt="KC Paan & Icecream Logo" class="logo">
+
+  <h1>KC Paan & Icecream</h1>
+  <p class="tagline">with Arya Ayurveda</p>
+
+  <div class="highlights">
+    <span class="highlight-tag">Live Paan</span>
+    <span class="highlight-tag">Kulfi</span>
+    <span class="highlight-tag">Fresh Sugarcane Juice</span>
+    <span class="highlight-tag">Icecream</span>
+    <span class="highlight-tag">Ayurvedic Products</span>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item featured">
+      <img src="images/paan-station-hq.jpg" alt="Paan Station - We Cater Paan For All Occasions - betel leaf with fresh ingredients">
+    </div>
+    <div class="gallery-item">
+      <img src="images/icecream-hq.jpg" alt="Home Made Natural Icecream - Matka Kulfi, Paan Icecream, Saffron Pistachio, Rose, Chikoo">
+    </div>
+    <div class="gallery-item">
+      <img src="images/menu-poster.jpg" alt="Menu - Chaat House, Fresh Sugarcane Juice, Rajwadi Gola, Lime Masala Soda, Kulfi, Masala Chai, Falooda">
+    </div>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="tel:+15625671008" class="cta cta-primary">Call Us</a>
+    <a href="https://www.google.com/maps/place/kc+paan/data=!4m2!3m1!1s0x80dd2da72510ea5d:0x35c4b02af0fbe818" target="_blank" rel="noopener" class="cta cta-secondary">Get Directions</a>
+    <a href="https://www.doordash.com/store/k-c-paan-artesia-28222210/" target="_blank" rel="noopener" class="cta cta-outline">Order Online</a>
+  </div>
+
+  <div class="info-card">
+    <h2>Visit Us</h2>
+    <div class="info-row">
+      <span class="info-icon">&#x1F4CD;</span>
+      <span class="info-text">
+        <a href="https://www.google.com/maps/place/kc+paan/data=!4m2!3m1!1s0x80dd2da72510ea5d:0x35c4b02af0fbe818" target="_blank" rel="noopener">
+          18630 Pioneer Blvd, Artesia, CA 90701
+        </a>
+      </span>
+    </div>
+    <div class="info-row">
+      <span class="info-icon">&#x1F4DE;</span>
+      <span class="info-text"><a href="tel:+15625671008">(562) 567-1008</a></span>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h2>Hours</h2>
+    <div class="hours-grid">
+      <span class="day">Monday</span><span class="closed">Closed</span>
+      <span class="day">Tuesday</span><span>12:00 PM - 9:30 PM</span>
+      <span class="day">Wednesday</span><span>12:00 PM - 9:30 PM</span>
+      <span class="day">Thursday</span><span>12:00 PM - 9:30 PM</span>
+      <span class="day">Friday</span><span>12:00 PM - 9:30 PM</span>
+      <span class="day">Saturday</span><span>11:00 AM - 10:00 PM</span>
+      <span class="day">Sunday</span><span>11:00 AM - 10:00 PM</span>
+    </div>
+  </div>
+
+  <div class="coming-soon">
+    <h2>New Website Coming Soon</h2>
+    <p>We're working on a brand new website with online ordering, full menu, and more. Stay tuned!</p>
+  </div>
+
+  <footer>
+    &copy; 2026 KC Paan & Icecream with Arya Ayurveda. All rights reserved.
+  </footer>
+
+</div>
+
+</body>
+</html>
